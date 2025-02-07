@@ -1,14 +1,16 @@
+import DemosListComponent from "@/components/demosList";
 import { createFileRoute } from "@tanstack/react-router";
-import * as React from "react";
 
 export const Route = createFileRoute("/")({
-	component: HomeComponent,
+  component: HomeComponent,
 });
 
 function HomeComponent() {
-	return (
-		<div className="p-2">
-			<h3>主页，一个基于 rspack + tanstack router 的 React 19 启动模板</h3>
-		</div>
-	);
+  return (
+    <div className="p-2">
+      <h3>记录前端开发过程中一些示例</h3>
+      {/* demos 列表 */}
+      <DemosListComponent />
+    </div>
+  );
 }
